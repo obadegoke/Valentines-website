@@ -4,7 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: #0f0f1f;
+      padding: 1rem 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      transition: color 0.3s ease, transform 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      color: #00fff5;
+      transform: scale(1.05);
+    }
+
+    .home {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .home h1 {
+      font-size: 3rem;
+      font-family: 'Orbitron', sans-serif;
+      color: #00fff5;
+      margin-bottom: 20px;
+    }
+
+    .home p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      line-height: 1.6;
+      color: #cccccc;
+    }
+
+    @media (max-width: 600px) {
+      .home h1 {
+        font-size: 2.2rem;
+      }
+
+      .home p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -13,9 +84,10 @@
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
   </nav>
+
   <section class="home">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hello! I'm a developer/designer passionate about building creative solutions.</p>
+    <h1>Adegunleye valentine's Multiverse</h1>
+    <p>Hello! I'm a developer/designer passionate about building creative solutions that bridge technology and art.</p>
   </section>
 </body>
 </html>

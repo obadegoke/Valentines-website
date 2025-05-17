@@ -6,21 +6,22 @@
 }
 
 body {
-margin: 0;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(to bottom, #1f1f1f, #2b2b2b); /* dark gradient background */
+  background: linear-gradient(to bottom, #1f1f1f, #2b2b2b);
   color: #fff;
+  line-height: 1.6;
 }
-
-
 
 /* Navbar */
 .navbar {
-  background: rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 20px 0;
   text-align: center;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar ul {
@@ -39,8 +40,8 @@ margin: 0;
 }
 
 .navbar a:hover {
-  color: #f1f1f1;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+  color: #00fff5;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
 }
 
 /* Hero Section */
@@ -51,119 +52,115 @@ margin: 0;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* optional dark overlay */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px;
 }
 
 .hero h1 {
   font-size: 4rem;
   font-weight: 700;
+  color: #00fff5;
   margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-/* Profile Section */
-.profile {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.profile h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.profile p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #e0f7fa;
 }
 
-/* Projects Section */
-.projects {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.projects h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.projects p {
-  font-size: 1.1rem;
-  color: #e0f7fa;
-}
-
-/* Contact Section */
-.contact {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.contact p {
-  font-size: 1.1rem;
-  color: #e0f7fa;
-}
-
-.contact a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.contact a:hover {
-  color: #f1f1f1;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
-}
-
-/* Footer */
-footer {
-  background: rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 1rem;
-}
-
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(to bottom, #1f1f1f, #2b2b2b); /* dark gradient background */
-  color: #fff;
-}
-
+/* Hero Image (if used separately) */
 .hero-image {
-  width: 200px; /* adjust size */
-  opacity: 0.85; /* slightly transparent for blend */
-  mix-blend-mode: screen; /* experiment: screen, overlay, multiply, etc. */
-  border-radius: 12px; /* optional for aesthetic */
+  width: 200px;
+  opacity: 0.85;
+  mix-blend-mode: screen;
+  border-radius: 12px;
+  margin-bottom: 20px;
   transition: transform 0.3s ease-in-out;
 }
 
 .hero-image:hover {
-  transform: scale(1.05); /* interactive feel */
+  transform: scale(1.05);
 }
 
-/* Optional: center content */
-.hero-content {
+/* Section Base Styling */
+section {
+  padding: 60px 20px;
   text-align: center;
-  padding: 50px 20px;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00fff5;
+}
+
+/* Profile */
+.profile p,
+.projects p,
+.contact p {
+  font-size: 1.1rem;
+  color: #e0f7fa;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Projects */
+.projects {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(3px);
+}
+
+/* Contact */
+.contact a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.contact a:hover {
+  color: #00fff5;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  color: #ccc;
+  font-size: 0.95rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
 }
