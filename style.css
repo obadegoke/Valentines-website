@@ -1,0 +1,169 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #1f1f1f, #2b2b2b); /* dark gradient background */
+  color: #fff;
+}
+
+
+
+/* Navbar */
+.navbar {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #f1f1f1;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+/* Hero Section */
+.hero {
+  background: url('Gray.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* Profile Section */
+.profile {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.profile h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.profile p {
+  font-size: 1.1rem;
+  color: #e0f7fa;
+}
+
+/* Projects Section */
+.projects {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.projects p {
+  font-size: 1.1rem;
+  color: #e0f7fa;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  color: #e0f7fa;
+}
+
+.contact a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact a:hover {
+  color: #f1f1f1;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #1f1f1f, #2b2b2b); /* dark gradient background */
+  color: #fff;
+}
+
+.hero-image {
+  width: 200px; /* adjust size */
+  opacity: 0.85; /* slightly transparent for blend */
+  mix-blend-mode: screen; /* experiment: screen, overlay, multiply, etc. */
+  border-radius: 12px; /* optional for aesthetic */
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-image:hover {
+  transform: scale(1.05); /* interactive feel */
+}
+
+/* Optional: center content */
+.hero-content {
+  text-align: center;
+  padding: 50px 20px;
+}
